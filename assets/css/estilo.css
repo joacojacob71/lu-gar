@@ -506,6 +506,16 @@ h1,h2,h3,h4,h5{
 
 /* ---------------- Tabla comparativa ---------------- */
 .tabla{margin-top:8px}
+/* Aviso de que la tabla se desliza. Solo se ve en pantallas chicas. */
+.tabla__aviso{display:none}
+@media (max-width:700px){
+  .tabla__aviso{
+    display:flex;align-items:center;gap:8px;margin:14px 0 0;
+    font-size:.82rem;color:var(--g400);
+  }
+  .tabla__aviso::before{content:'⇠';font-size:1rem;color:var(--rojo)}
+  .tabla__aviso::after{content:'⇢';font-size:1rem;color:var(--rojo)}
+}
 .tabla table{
   width:100%;border-collapse:collapse;background:#fff;
   border:1px solid rgba(0,0,0,.08);border-radius:var(--r);overflow:hidden;
@@ -534,11 +544,19 @@ h1,h2,h3,h4,h5{
 }
 .tabla tbody tr:last-child th,.tabla tbody tr:last-child td{border-bottom:0}
 
+/* En celular la tabla se desliza en horizontal en vez de apilarse: apilada los valores
+   quedaban sueltos y no se sabia a que columna correspondia cada uno. Se le deja un ancho
+   minimo para que las tres columnas se lean enteras y el usuario deslice con el dedo. */
 @media (max-width:700px){
-  .tabla thead{display:none}
-  .tabla tbody tr{display:block;border-bottom:1px solid rgba(0,0,0,.08);padding:6px 0}
-  .tabla tbody th,.tabla td{display:block;border:0;padding:6px 18px;width:auto}
-  .tabla td.destacado{box-shadow:none}
+  .tabla{
+    overflow-x:auto;-webkit-overflow-scrolling:touch;
+    padding-bottom:6px;
+  }
+  .tabla table{min-width:460px}
+  .tabla th,.tabla td{padding:14px 16px}
+  .tabla thead th{font-size:.78rem}
+  .tabla tbody th{font-size:.82rem}
+  .tabla td.destacado{box-shadow:inset 3px 0 0 var(--rojo)}
 }
 
 /* ---------------- Línea destacada ---------------- */
@@ -936,10 +954,15 @@ figcaption{font-size:.83rem;color:var(--g400);margin-top:12px}
 
 @media (max-width:520px){
   .wrap{padding-inline:18px}
-  .marcas,.clientes{grid-template-columns:1fr}
+  /* Los logos son cuadrados: a dos por fila se aprovecha mejor el ancho del celular
+     que a una sola columna, que dejaba la mitad de la pantalla vacia. */
+  .marcas,.clientes{grid-template-columns:repeat(2,minmax(0,1fr))}
   .datos__grid{grid-template-columns:1fr}
   .dato{border-right:0;padding-inline:0}
   .fab-wa span{display:none}
+  /* Los botones flotantes se apoyan sobre el pie: hay que dejarles lugar para que no
+     tapen el texto de copyright. */
+  .pie{padding-bottom:96px}
   .fab-wa{padding:15px;border-radius:50%}
   .btn--wa span{display:none}
   .topbar__grupo--der{display:none}
