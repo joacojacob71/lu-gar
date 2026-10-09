@@ -271,26 +271,21 @@ h1,h2,h3,h4,h5{
 
 /* ---------------- Testo en el encabezado ---------------- */
 .hero__testo{
-  display:flex;align-items:center;gap:16px;
-  margin:0 0 26px;padding:14px 22px;
+  margin:0 0 26px;padding:11px 22px;
   border-radius:999px;
   background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);
-  backdrop-filter:blur(10px);
-  transition:border-color .35s,background .35s;
-}
-.hero__testo:hover{border-color:rgba(229,4,4,.5);background:rgba(229,4,4,.07)}
-.hero__testo-logo{
-  flex:0 0 auto;display:grid;place-items:center;
-  height:30px;padding:0 2px;border-radius:6px;
-}
-.hero__testo-logo img{
-  max-height:100%;width:auto;display:block;
-  filter:brightness(0) invert(1);
 }
 .hero__testo p{
   margin:0;font-size:.95rem;color:var(--g300);font-weight:400;line-height:1.35;
 }
-.hero__testo p b{font-weight:700;color:#fff}
+/* El logo de Testo es azul oscuro y no se ve sobre fondo oscuro, asi que el nombre
+   va en texto, con el peso de marca. */
+.hero__testo-n{
+  font-family:'Sora',sans-serif;font-weight:800;color:#fff;
+  text-decoration:none;border-bottom:2px solid var(--rojo);padding-bottom:1px;
+  transition:color .3s,border-color .3s;
+}
+.hero__testo-n:hover{color:var(--rojo);border-color:#ff7a3d}
 
 /* ---------------- Datos del hero (lista liviana) ---------------- */
 .hero__datos{
