@@ -917,11 +917,19 @@ figcaption{font-size:.83rem;color:var(--g400);margin-top:12px}
   .nav{
     position:fixed;inset:116px 0 auto 0;
     flex-direction:column;align-items:stretch;gap:0;
-    background:var(--g850);border-bottom:1px solid rgba(255,255,255,.1);
+    background:var(--g850);
+    /* Cerrado no lleva borde: con alto cero igual se dibujaba la linea de 1px que
+       atravesaba la pagina bajo el encabezado. */
+    border-bottom:0 solid rgba(255,255,255,.1);
     padding:0 24px;max-height:0;overflow:hidden;
-    transition:max-height .45s var(--ease),padding .45s;
+    transition:max-height .45s var(--ease),padding .45s,border-color .45s;
   }
-  .nav.is-open{max-height:70vh;padding:8px 24px 22px;overflow-y:auto}
+  .nav.is-open{
+    max-height:70vh;padding:8px 24px 22px;overflow-y:auto;
+    /* Hay que subir el grosor ademas del color: en la regla de arriba el borde
+       esta en 0, y cambiar solo el color no lo hace aparecer. */
+    border-bottom-width:1px;border-bottom-color:rgba(255,255,255,.1);
+  }
   .nav a{padding:14px 0;border-bottom:1px solid rgba(255,255,255,.07);font-size:.98rem;white-space:normal}
   .hamb{display:block}
   .grid-3,.cols-3-img{grid-template-columns:repeat(2,minmax(0,1fr))}
