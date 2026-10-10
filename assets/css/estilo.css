@@ -722,11 +722,10 @@ a.marca-enlace:hover .marca-enlace__ext{color:var(--rojo)}
   margin-bottom:26px;
 }
 .testo__lado{padding:clamp(26px,3.6vw,44px)}
-.testo__lado h2{font-size:clamp(2.1rem,4.2vw,3rem);font-weight:800;margin-bottom:20px}
+.testo__lado h2{font-size:clamp(2.1rem,4.2vw,3rem);font-weight:800;margin-bottom:12px}
 .testo__intro{color:var(--g300);margin:0 0 30px;font-size:1.02rem}
 /* El nombre va primero y el distintivo debajo: hay que recomponer los margenes,
    porque el distintivo estaba disenado para ir arriba. */
-.testo__lado h2{margin-bottom:12px}
 .testo__lado .badge{margin-bottom:22px}
 
 
