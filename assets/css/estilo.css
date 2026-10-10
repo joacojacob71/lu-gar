@@ -396,6 +396,8 @@ h1,h2,h3,h4,h5{
 .ficha:hover{transform:translateY(-8px);border-color:rgba(229,4,4,.5);box-shadow:var(--sombra)}
 .ficha .card__tag{align-self:flex-start;margin-bottom:16px}
 .ficha h3{font-size:1.2rem;margin-bottom:14px}
+/* Las tarjetas de Testo ya no llevan titulo: el distintivo de arriba hace ese papel. */
+.ficha__lead:first-of-type{margin-top:16px}
 .ficha__lead{font-size:.95rem;color:var(--g400);margin:0 0 20px}
 .ficha__lista{list-style:none;margin:0 0 22px;padding:0;flex:1}
 .ficha__lista li{
@@ -495,9 +497,12 @@ h1,h2,h3,h4,h5{
 .testo__lado--logo{
   display:grid;place-items:center;padding:clamp(22px,3vw,36px);
 }
+/* La mitad del tamaño original de 340px */
 .testo__lado--logo img{
-  width:100%;max-width:340px;height:auto;object-fit:contain;
+  width:100%;max-width:170px;height:auto;object-fit:contain;
 }
+.testo__lado--logo a{display:block;transition:transform .35s var(--ease)}
+.testo__lado--logo a:hover{transform:scale(1.04)}
 
 /* ---------------- Tabla comparativa ---------------- */
 .tabla{margin-top:8px}
@@ -702,6 +707,10 @@ a.marca-enlace:hover .marca-enlace__ext{color:var(--rojo)}
 .testo__lado{padding:clamp(26px,3.6vw,44px)}
 .testo__lado h2{font-size:clamp(2.1rem,4.2vw,3rem);font-weight:800;margin-bottom:20px}
 .testo__intro{color:var(--g300);margin:0 0 30px;font-size:1.02rem}
+/* El nombre va primero y el distintivo debajo: hay que recomponer los margenes,
+   porque el distintivo estaba disenado para ir arriba. */
+.testo__lado h2{margin-bottom:12px}
+.testo__lado .badge{margin-bottom:22px}
 
 
 .testo__lado--img{position:relative;padding:0;display:flex;flex-direction:column;justify-content:center;overflow:hidden}
