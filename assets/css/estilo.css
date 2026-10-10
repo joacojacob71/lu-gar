@@ -396,8 +396,6 @@ h1,h2,h3,h4,h5{
 .ficha:hover{transform:translateY(-8px);border-color:rgba(229,4,4,.5);box-shadow:var(--sombra)}
 .ficha .card__tag{align-self:flex-start;margin-bottom:16px}
 .ficha h3{font-size:1.2rem;margin-bottom:14px}
-/* Las tarjetas de Testo ya no llevan titulo: el distintivo de arriba hace ese papel. */
-.ficha__lead:first-of-type{margin-top:16px}
 .ficha__lead{font-size:.95rem;color:var(--g400);margin:0 0 20px}
 .ficha__lista{list-style:none;margin:0 0 22px;padding:0;flex:1}
 .ficha__lista li{
