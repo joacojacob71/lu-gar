@@ -175,7 +175,7 @@ h1,h2,h3,h4,h5{
 
 
 
-.hero__bajada{max-width:640px;font-size:1.09rem;color:var(--g300);font-weight:300;margin:0 0 38px;text-align:center}
+.hero__bajada{max-width:640px;font-size:1.09rem;color:var(--g300);font-weight:300;margin:0 0 28px;text-align:center}
 
 
 .hero__sellos{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;max-width:1000px;width:100%}
@@ -213,11 +213,14 @@ h1,h2,h3,h4,h5{
 .dato a:hover{color:var(--rojo)}
 
 /* ---------------- Secciones ---------------- */
-.sec{padding:clamp(76px,10vw,124px) 0}
+/* Espaciado general. El dueño pidio bajar las separaciones que eran mas grandes que la
+   altura de dos letras, manteniendo los tamanos de letra: asi que acortamos los huecos,
+   no la tipografia. */
+.sec{padding:clamp(54px,6.4vw,84px) 0}
 .sec--oscura{background:var(--g900)}
 .sec--clara{background:var(--g100);color:var(--g700)}
 
-.sec__cab{max-width:780px;margin:0 auto 64px;text-align:center}
+.sec__cab{max-width:780px;margin:0 auto 46px;text-align:center}
 .sec__num{
   display:inline-block;font-family:'Sora',sans-serif;font-weight:800;font-size:.82rem;
   color:var(--rojo);letter-spacing:.1em;margin-bottom:14px;
@@ -228,12 +231,12 @@ h1,h2,h3,h4,h5{
 }
 .sec__titulo{font-size:clamp(2rem,4.3vw,3.1rem);font-weight:800;margin-bottom:20px}
 .sec--clara .sec__titulo{color:var(--g900)}
-.sec__intro{font-size:1.04rem;line-height:1.78;margin:0 auto;color:var(--g400);max-width:700px}
+.sec__intro{font-size:1.04rem;line-height:1.62;margin:0 auto;color:var(--g400);max-width:700px}
 .sec--clara .sec__intro{color:var(--g600)}
 
 .subtitulo{font-size:1.3rem;margin-bottom:22px;color:var(--g900)}
-.subtitulo--centro{text-align:center;margin-top:64px}
-.sec__intro--centro{text-align:center;margin-inline:auto;margin-bottom:52px}
+.subtitulo--centro{text-align:center;margin-top:40px}
+.sec__intro--centro{text-align:center;margin-inline:auto;margin-bottom:38px}
 
 /* ---------------- Flujo de calor ---------------- */
 .pared__flujo{margin:0 0 26px}
@@ -288,7 +291,7 @@ h1,h2,h3,h4,h5{
 
 /* ---------------- Datos del hero (lista liviana) ---------------- */
 .hero__datos{
-  list-style:none;margin:0 auto 64px;padding:0;max-width:820px;
+  list-style:none;margin:0 auto 44px;padding:0;max-width:820px;
   display:flex;flex-direction:column;align-items:center;gap:9px;
 }
 /* Cada punto va pegado a su texto: el vinete se mide con el ancho del texto, no con
@@ -364,15 +367,15 @@ h1,h2,h3,h4,h5{
 
 /* ---------------- Grids ---------------- */
 .grid-3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:26px}
-.grid-2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:52px}
-.cols-2{display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:center}
+.grid-2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:38px}
+.cols-2{display:grid;grid-template-columns:1fr 1fr;gap:38px;align-items:center}
 .cols-3-img{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;margin-top:26px}
-.cols-2-img{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:26px;margin-top:52px}
-.cols-1-img{margin-top:52px}
+.cols-2-img{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:26px;margin-top:38px}
+.cols-1-img{margin-top:38px}
 
 /* ---------------- Panel de trazabilidad ---------------- */
 .traz{
-  margin-top:26px;padding:clamp(32px,4.4vw,54px);border-radius:var(--r);
+  margin-top:26px;padding:clamp(26px,3.4vw,42px);border-radius:var(--r);
   background:
     radial-gradient(760px 380px at 88% 0%,rgba(229,4,4,.2),transparent 70%),
     linear-gradient(150deg,var(--g700) 0%,var(--g850) 100%);
@@ -387,9 +390,9 @@ h1,h2,h3,h4,h5{
 .traz h3{font-size:clamp(1.5rem,2.9vw,2.1rem);margin-bottom:16px}
 .traz__lead{max-width:760px;color:var(--g300);font-size:1.02rem;margin:0 0 22px}
 .traz__ejemplos{
-  max-width:820px;margin:0 0 30px;padding:18px 22px;border-radius:12px;
+  max-width:820px;margin:0 0 24px;padding:18px 22px;border-radius:12px;
   background:rgba(0,0,0,.28);border:1px solid rgba(255,255,255,.09);
-  font-size:.95rem;color:#fff;line-height:1.85;
+  font-size:.95rem;color:#fff;line-height:1.66;
 }
 
 /* ---------------- Ficha de producto sin foto ---------------- */
@@ -493,12 +496,12 @@ h1,h2,h3,h4,h5{
 /* ---------------- Título normal centrado ---------------- */
 .subtitulo--normal{
   font-weight:400;font-family:'Inter',sans-serif;text-align:center;
-  font-size:1.18rem;letter-spacing:0;margin-top:48px;
+  font-size:1.18rem;letter-spacing:0;margin-top:36px;
 }
 
 /* ---------------- Logotipo de Testo ---------------- */
 .testo__lado--logo{
-  display:grid;place-items:center;padding:clamp(28px,4vw,48px);
+  display:grid;place-items:center;padding:clamp(22px,3vw,36px);
 }
 .testo__lado--logo img{
   width:100%;max-width:340px;height:auto;object-fit:contain;
@@ -670,7 +673,7 @@ a.marca-enlace:hover .marca-enlace__ext{color:var(--rojo)}
 }
 .nota__img{min-height:320px}
 .nota__img img{width:100%;height:100%;object-fit:cover}
-.nota__txt{padding:clamp(30px,4.5vw,54px);display:flex;flex-direction:column;justify-content:center}
+.nota__txt{padding:clamp(24px,3.4vw,42px);display:flex;flex-direction:column;justify-content:center}
 .nota__txt h3{font-size:1.55rem;margin-bottom:16px}
 .nota__txt p{color:var(--g400);margin:0 0 28px}
 
@@ -692,19 +695,19 @@ a.marca-enlace:hover .marca-enlace__ext{color:var(--rojo)}
 /* ---------------- Testo (destacado) ---------------- */
 .badge{
   display:inline-block;font-size:.73rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
-  background:var(--rojo);color:#fff;padding:8px 18px;border-radius:999px;margin-bottom:22px;
+  background:var(--rojo);color:#fff;padding:8px 18px;border-radius:999px;margin-bottom:16px;
   box-shadow:0 8px 22px rgba(229,4,4,.34);
 }
 .badge--oscuro{background:var(--g700);box-shadow:none}
 
-.testo{padding:clamp(30px,5vw,60px) 0;background:var(--g800)}
+.testo{padding:clamp(24px,3.6vw,44px) 0;background:var(--g800)}
 .testo__box{
   display:grid;grid-template-columns:1.05fr 1fr;gap:0;overflow:hidden;
   border-radius:22px;border:1px solid rgba(255,255,255,.1);
   background:linear-gradient(150deg,var(--g700) 0%,var(--g850) 100%);
   box-shadow:var(--sombra);
 }
-.testo__lado{padding:clamp(32px,4.6vw,58px)}
+.testo__lado{padding:clamp(26px,3.6vw,44px)}
 .testo__lado h2{font-size:clamp(2.1rem,4.2vw,3rem);font-weight:800;margin-bottom:20px}
 .testo__intro{color:var(--g300);margin:0 0 30px;font-size:1.02rem}
 .testo__pie{font-size:.8rem;color:var(--g400);margin:14px 0 0}
