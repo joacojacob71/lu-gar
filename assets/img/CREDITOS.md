@@ -16,9 +16,11 @@ mostrar.
 | `horno-napolitano.jpg` | 01 Aislaciones — napolitano | Horno de leña con boca de arco |
 | `horno-ceramico.jpg` | 01 Aislaciones — cerámico | Vidrio y cerámica a alta temperatura |
 | `horno-convector.jpg` | 01 Aislaciones — convector | Equipo de climatización industrial |
-| `aislacion.jpg` | 01 Aislaciones — nota final | Revestimiento refractario en pared de horno |
-| `data-logger.jpg` | Bloque Testo | Registrador de temperatura y humedad |
 | `maquina.jpg` | 04 Instrumentación | Equipos y cañerías de acero inoxidable |
+
+Las fotos `aislacion.jpg` y `data-logger.jpg` se descargaron al principio pero
+terminaron sin usarse, así que se borraron. `marcas/testo.png` es el logo viejo de
+Testo con la frase "Be sure.", que se reemplazó por `marcas/testo-recortado.png`.
 
 ## Fotos que se descartaron y por qué
 
@@ -35,12 +37,15 @@ Se descargaron y revisaron una por una. Estas no se usan:
 
 ## Fotos de Testo
 
-No se usan. Son propiedad de Testo y no se pueden copiar a un sitio de terceros.
-Se buscó un área de prensa en testo.com/es-AR y no existe.
+No se usan, y **no es un problema pendiente**: los equipos Testo no están en el local.
+Llegan desde casa central en unos **5 días**. Por eso no hay nada que fotografiar.
 
-Si se quieren fotos de los equipos, las vías son: fotografiar los equipos del local,
-pedir el material de prensa a Testo como representante exclusivo, o comprar las
-imágenes con licencia.
+Lo que hay en su lugar son **links a la web de casa central** (testo.com/es-AR). Si un
+cliente habla directamente con ellos, el pedido lo despachan a través de Lu-Gar, que
+sigue siendo el canal de venta en Rosario.
+
+Por lo tanto **no hacen falta fotos de producto**: la forma de resolver las dudas de
+catálogo es llamar o escribir, y ahí se los deriva a casa central.
 
 ## Antes de publicar
 
