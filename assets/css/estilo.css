@@ -492,15 +492,25 @@ h1,h2,h3,h4,h5{
 }
 
 /* ---------------- Logotipo de Testo ---------------- */
-.testo__lado--logo{
-  display:grid;place-items:center;padding:clamp(22px,3vw,36px);
+/* Va flotando a la derecha dentro de la lista, justo despues de la linea que termina
+   en "vibraciones". Al estar en el flujo se acomoda solo si el texto se reacomoda. */
+.lista-chk__logo{
+  float:right;list-style:none;padding:0 !important;
+  width:111px;margin:6px 0 18px 24px !important;
 }
-/* Mitad del tamaño anterior (170px -> 85px) */
-.testo__lado--logo img{
-  width:100%;max-width:85px;height:auto;object-fit:contain;
+.lista-chk__logo::before,.lista-chk__logo::after{display:none}
+.lista-chk__logo a{display:block;line-height:0;transition:transform .35s var(--ease)}
+.lista-chk__logo a:hover{transform:scale(1.04)}
+.lista-chk__logo img{
+  display:block;width:100%;height:auto;max-width:100%;object-fit:contain;
 }
-.testo__lado--logo a{display:block;transition:transform .35s var(--ease)}
-.testo__lado--logo a:hover{transform:scale(1.04)}
+
+/* En pantallas angostas no hay lugar al costado: el logo vuelve a su propio renglon. */
+@media (max-width:760px){
+  .lista-chk__logo{
+    float:none;width:111px;margin:4px 0 20px !important;
+  }
+}
 
 /* ---------------- Tabla comparativa ---------------- */
 .tabla{margin-top:8px}
@@ -697,7 +707,14 @@ a.marca-enlace:hover .marca-enlace__ext{color:var(--rojo)}
 
 .testo{padding:clamp(24px,3.6vw,44px) 0;background:var(--g800)}
 .testo__box{
-  display:grid;grid-template-columns:1.05fr 1fr;gap:0;overflow:hidden;
+  /* El logo va abajo a la derecha. Se reserva una banda de alto para el, y esa misma
+     medida la usa el logo para su alto: asi nunca queda mas grande que el espacio
+     disponible ni se superpone con el texto. */
+  --banda-logo:clamp(111px,13vw,160px);
+  /* El aire grewce la caja y sube el logo a la vez, asi que al subirlo nunca queda
+     encima del texto. */
+  --aire-logo:clamp(14px,1.8vw,22px);
+  position:relative;display:block;overflow:hidden;
   border-radius:22px;border:1px solid rgba(255,255,255,.1);
   background:linear-gradient(150deg,var(--g700) 0%,var(--g850) 100%);
   box-shadow:var(--sombra);
