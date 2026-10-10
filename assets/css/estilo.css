@@ -702,7 +702,7 @@ a.marca-enlace:hover .marca-enlace__ext{color:var(--rojo)}
 .testo__lado{padding:clamp(26px,3.6vw,44px)}
 .testo__lado h2{font-size:clamp(2.1rem,4.2vw,3rem);font-weight:800;margin-bottom:20px}
 .testo__intro{color:var(--g300);margin:0 0 30px;font-size:1.02rem}
-.testo__pie{font-size:.8rem;color:var(--g400);margin:14px 0 0}
+
 
 .testo__lado--img{position:relative;padding:0;display:flex;flex-direction:column;justify-content:center;overflow:hidden}
 .testo__marca{
